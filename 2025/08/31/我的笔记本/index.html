@@ -28,8 +28,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/photo.jpg">
 <meta property="og:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/fastfetch.jpg">
+<meta property="og:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/ascii.jpg">
 <meta property="article:published_time" content="2025-08-31T15:10:22.000Z">
-<meta property="article:modified_time" content="2025-09-01T03:50:46.534Z">
+<meta property="article:modified_time" content="2025-09-01T03:53:58.569Z">
 <meta property="article:author" content="GoldesqueMoON">
 <meta property="article:tag" content="电脑">
 <meta property="article:tag" content="笔记本">
@@ -228,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          646 字
+          875 字
         
       </span>
     
@@ -239,7 +240,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -310,6 +311,13 @@
 <p>后来驱动打上了之后，使用Prime-run 体验不赖，游戏也可以正常运行，显卡调用一切正常</p>
 <h3 id="引导-安全启动"><a href="#引导-安全启动" class="headerlink" title="引导&amp;安全启动"></a>引导&amp;安全启动</h3><p>Archlinux 自带的引导是Systemd-boot，好用，但是总感觉太原始了，于是换成了Grub.</p>
 <p>但是Grub 坏事做尽啊问题不断。换分辨率？不行。换背景图片换主题？不行。一切只能用默认，最多是加载系统的时候cat 个asciiart 出来，除此之外没什么可以自定义的了。说来也奇怪网上没有见到别人有出现类似的情况，可能是某些设备驱动的问题吧。</p>
+<img src="/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/ascii.jpg" srcset="/img/loading.gif" lazyload class="" title="启动Arch时的asciiart">
+
+<p>后来还是用Grub整了点活的，Win+Linux双引导，还能chainload U盘上的Ventoy系统</p>
+<p>但是Archlinux 和Ubuntu 之类的不太一样，他的引导不支持安全启动，没签名。机械革命的BIOS 设计也很奇葩，安全签名的配置模式没法进系统只能在BIOS 内操作，导致我安全启动问题至今未能解决，只能是在Windows 需要打带有反作弊的游戏时临时开启。</p>
+<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>是的我就是头铁想在Linux 下打游戏。</p>
+<p>最开始想着用Wine 来着，后来懒得配置直接Steam 启动了。<br>不得不说Proton 真的好用，自己经常玩的游戏都可以直接跑。</p>
+<p>然后就是Vulkan 发力了，跑个CS2帧数比Windows 下面都高，有第三方客户端的比如看门狗也是全开没遇到bug爽玩，赛博朋克2077也能流畅运行</p>
 
                 
               </div>
