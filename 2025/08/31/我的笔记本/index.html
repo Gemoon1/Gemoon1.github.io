@@ -26,15 +26,16 @@
 <meta property="og:site_name" content="GeMoON">
 <meta property="og:description" content="买了人生第一台新电脑">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/photo.jpg">
 <meta property="og:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/fastfetch.jpg">
 <meta property="article:published_time" content="2025-08-31T15:10:22.000Z">
-<meta property="article:modified_time" content="2025-09-01T03:27:47.603Z">
+<meta property="article:modified_time" content="2025-09-01T03:50:46.534Z">
 <meta property="article:author" content="GoldesqueMoON">
 <meta property="article:tag" content="电脑">
 <meta property="article:tag" content="笔记本">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/fastfetch.jpg">
+<meta name="twitter:image" content="https://gemoon1.github.io/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/photo.jpg">
   
   
   
@@ -227,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          646 字
         
       </span>
     
@@ -238,7 +239,7 @@
         
         
         
-          10 分钟
+          6 分钟
         
       </span>
     
@@ -281,6 +282,8 @@
               <div class="markdown-body">
                 
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>打算为大学生活升级一下硬件，替换下原来不方便使用的Xeon X79 台式机，想要打打新游戏体验一下现代平台，换个新电脑好给我找个理由体验一下Linux，于是拼多多买来了这台机子。</p>
+<img src="/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/photo.jpg" srcset="/img/loading.gif" lazyload class="" title="照片">
+
 <h2 id="型号-配置"><a href="#型号-配置" class="headerlink" title="型号&amp;配置"></a>型号&amp;配置</h2><p><strong>机械革命蛟龙16Pro 2025</strong></p>
 <ul>
 <li>处理器: AMD Ryzen 9 7945HX 16c32t</li>
@@ -307,18 +310,6 @@
 <p>后来驱动打上了之后，使用Prime-run 体验不赖，游戏也可以正常运行，显卡调用一切正常</p>
 <h3 id="引导-安全启动"><a href="#引导-安全启动" class="headerlink" title="引导&amp;安全启动"></a>引导&amp;安全启动</h3><p>Archlinux 自带的引导是Systemd-boot，好用，但是总感觉太原始了，于是换成了Grub.</p>
 <p>但是Grub 坏事做尽啊问题不断。换分辨率？不行。换背景图片换主题？不行。一切只能用默认，最多是加载系统的时候cat 个asciiart 出来，除此之外没什么可以自定义的了。说来也奇怪网上没有见到别人有出现类似的情况，可能是某些设备驱动的问题吧。</p>
-<p>后来还是用Grub整了点活的，Win+Linux双引导，还能chainload U盘上的Ventoy系统</p>
-<p>但是Archlinux 和Ubuntu 之类的不太一样，他的引导不支持安全启动，没签名。机械革命的BIOS 设计也很奇葩，安全签名的配置模式没法进系统只能在BIOS 内操作，导致我安全启动问题至今未能解决，只能是在Windows 需要打带有反作弊的游戏时临时开启。</p>
-<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>是的我就是头铁想在Linux 下打游戏。</p>
-<p>最开始想着用Wine 来着，后来懒得配置直接Steam 启动了。<br>不得不说Proton 真的好用，自己经常玩的游戏都可以直接跑。</p>
-<p>然后就是Vulkan 发力了，跑个CS2帧数比Windows 下面都高，有第三方客户端的比如看门狗也是全开没遇到bug爽玩。</p>
-<p>至于Minecraft 那种用opengl的Java游戏，装个Openjdk 直接打开启动器就行，玩起来和Windows下一样</p>
-<p>Windows 下游戏体验良好，由于装了Win10，大小核调度需要调整一下注册表，调过后感觉和自带的系统差不多</p>
-<h3 id="这Hexo-Blog-的迁移"><a href="#这Hexo-Blog-的迁移" class="headerlink" title="这Hexo Blog 的迁移"></a>这Hexo Blog 的迁移</h3><p>其实也没什么问题，但是之前的Blog 完全没有备份md文件所以直接寄了，我也懒得把那些没营养的东西再写一遍了所以直接推倒了。然后就是推送到Github 网络问题非常难受，后面换成ssh连接就没什么问题了</p>
-<p>（如果早点知道也不会那么折磨…）</p>
-<h2 id="关于机械革命"><a href="#关于机械革命" class="headerlink" title="关于机械革命"></a>关于机械革命</h2><p>很多人不推荐买机械革命，其实是前几年这玩意品控实在一般，至于现在感觉还好吧</p>
-<p>机子整体颜值在线，性能释放可以，硬件性价比很高，为了加128G的拆机固态我也拆开后盖看了，用料没啥问题，装硬盘也不麻烦。</p>
-<p>还有很关键的一些就是，我的这个型号装WIndows10，驱动是全兼容的，完全可以不使用出场系统，装Linux也能准确识别各种设备没有遇到什么奇怪的问题</p>
 
                 
               </div>
