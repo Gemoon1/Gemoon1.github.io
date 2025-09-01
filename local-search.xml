@@ -17,19 +17,6 @@
   
   
   <entry>
-    <title>我的笔记本</title>
-    <link href="/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
-    <url>/2025/08/31/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC/</url>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>打算为大学生活升级一下硬件，替换下原来不方便使用的Xeon X79 台式机，想要打打新游戏体验一下现代平台，换个新电脑好给我找个理由体验一下Linux，于是拼多多买来了这台机子。</p><h2 id="型号-配置"><a href="#型号-配置" class="headerlink" title="型号&amp;配置"></a>型号&amp;配置</h2><p><strong>机械革命蛟龙16Pro 2025</strong></p><ul><li>处理器: AMD Ryzen 9 7945HX 16c32t</li><li>显卡: NVIDIA GeForce RTX 5060M 8GB</li><li>内存: 32GB DDR5 5200</li><li>硬盘：1TB+128GB NVME</li><li>屏幕：2560x1600@180hz</li><li>接口：USB-A<em>3，Type-C</em>2，HDMI，miniDP，2.5G RJ45</li></ul><p>Fastfetch如图</p><p><img src="/fastfetch.jpg" alt="Fastfetch截图"><br><img src="/fastfetch.jpg" alt="aa"></p><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>Windows 10 Pro 21h1 (使用<a href="http://y-os.net/">Y-OS精简版</a>)</p><p>Arch Linux KDE（那自然是最新版）</p><h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><h3 id="Nvidia驱动"><a href="#Nvidia驱动" class="headerlink" title="Nvidia驱动"></a>Nvidia驱动</h3><p>我真的吐了Nvidia 能不能好好做驱动？？Windows 下面优化三天五头出问题，打个游戏补帧和鬼一样；Linux 下面是死活装不上，最后阴差阳错+无数次轮回装上Wayland+Nvidia-open 的时候已经半死不活不指望什么了。</p><p>然后就是双显卡的配置，最早想要用N卡的Optimus manager 来着，经测试无效，Nvidia-smi 甚至根本不识别显卡，故作罢。</p><p>那时候打算直接ban掉Linux 下N卡的电源来着，效果是不错，N卡完全消失了。可是问题是切换到Windows 系统下进桌面等一小会N卡也会掉，吓得我赶紧换回去了（）</p><p>后来驱动打上了之后，使用Prime-run 体验不赖，游戏也可以正常运行，显卡调用一切正常</p><h3 id="引导-安全启动"><a href="#引导-安全启动" class="headerlink" title="引导&amp;安全启动"></a>引导&amp;安全启动</h3><p>Archlinux 自带的引导是Systemd-boot，好用，但是总感觉太原始了，于是换成了Grub.</p><p>但是Grub 坏事做尽啊问题不断。换分辨率？不行。换背景图片换主题？不行。一切只能用默认，最多是加载系统的时候cat 个asciiart 出来，除此之外没什么可以自定义的了。说来也奇怪网上没有见到别人有出现类似的情况，可能是某些设备驱动的问题吧。</p><p>后来还是用Grub整了点活的，Win+Linux双引导，还能chainload U盘上的Ventoy系统</p><p>但是Archlinux 和Ubuntu 之类的不太一样，他的引导不支持安全启动，没签名。机械革命的BIOS 设计也很奇葩，安全签名的配置模式没法进系统只能在BIOS 内操作，导致我安全启动问题至今未能解决，只能是在Windows 需要打带有反作弊的游戏时临时开启。</p><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>是的我就是头铁想在Linux 下打游戏。</p><p>最开始想着用Wine 来着，后来懒得配置直接Steam 启动了。<br>不得不说Proton 真的好用，自己经常玩的游戏都可以直接跑。</p><p>然后就是Vulkan 发力了，跑个CS2帧数比Windows 下面都高，有第三方客户端的比如看门狗一也是全开没遇到bug爽玩。</p><p>至于Minecraft 那种Java游戏，装个Openjdk 直接打开启动器就行，可惜经常玩的整合包老是闪退。</p><p>Windows 下游戏体验良好，由于装了Win10，大小核调度需要调整一下注册表，调过后感觉和自带的系统差不多</p><h3 id="这Hexo-Blog-的迁移"><a href="#这Hexo-Blog-的迁移" class="headerlink" title="这Hexo Blog 的迁移"></a>这Hexo Blog 的迁移</h3><p>其实也没什么问题，但是之前的Blog 完全没有备份md文件所以直接寄了，我也懒得把那些没营养的东西再写一遍了所以直接推倒了。然后就是推送到Github 网络问题非常难受，后面换成ssh连接就没什么问题了（如果早点知道也不会那么折磨…）</p><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>浏览器：Chrome，谁用Firefox 啊我真的不理解了，在Windows 环境下内存泄漏，其他除了开源没有比Chrome 多出来任何优点。至于Chromium 不用主要是因为不能方便的登陆同步</p><p>听音乐：Windows 下使用AppleMusic；Linux 下使用Go-musicfox</p><p>写作：Linux 下使用Ghostwriter</p><p>看视频：MPV，配置好了之后可以补帧B站视频到60帧（如果你有会员可以补到120）</p><p>其它：Linux 下推荐Mission Centre 这个任务管理器，很漂亮；科学上网双系统都使用Clash verge；下拉式终端使用Yakuake.</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>你好吗？你还好吗？</title>
     <link href="/2025/08/30/%E4%BD%A0%E5%A5%BD%E5%90%97%EF%BC%9F%E4%BD%A0%E8%BF%98%E5%A5%BD%E5%90%97%EF%BC%9F/"/>
     <url>/2025/08/30/%E4%BD%A0%E5%A5%BD%E5%90%97%EF%BC%9F%E4%BD%A0%E8%BF%98%E5%A5%BD%E5%90%97%EF%BC%9F/</url>
